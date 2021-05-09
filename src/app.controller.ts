@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { AppService } from './app.service';
-import { NFT1155DTO } from './dtos/nft1155.dto';
+// import { NFT1155DTO } from './dtos/nft1155.dto';
 
 const Web3 = require('web3');
 
@@ -17,14 +17,13 @@ export class AppController {
         '0xa8A3Cc07DA00396ce7e991AF2a3fb0464bD7b5A8',
       );
 
-      console.log(data);
-
       return true;
     } catch (error) {
       console.log(error);
     }
   }
 
+  /*
   @Get(':id')
   async findOne(@Param('id') id): Promise<NFT1155DTO> {
     try {
@@ -46,4 +45,5 @@ export class AppController {
       throw new Error(error);
     }
   }
+  */
 }
